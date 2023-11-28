@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import aos from 'aos';
+import { useEffect } from 'react';
+import { NavLink, Routes, Route } from 'react-router-dom';
+import Navigation from './Nav';
+import Main from './Main';
+import SpotifyRec from './Projects/SpotifyRec'
+import Projecttwo from './Projects/MangaProjects';
+import Interests from './More/interests';
+import Res from './Resume/Resume';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen h-screen bg-[#fffaf0]">
+      <Navigation/>
+      <Routes>
+        <Route path = '/' element = {<Main/>}/>
+        <Route path = '/spotifyrecs' element = {<SpotifyRec/>}/>
+        <Route path = '/mangaproject' element = {<Projecttwo/>}/>
+        <Route path = '/interests' element = {<Interests/>}/>
+        <Route path = '/Resume' element = {<Res/>}/>
+      </Routes>
     </div>
   );
 }
