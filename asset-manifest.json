@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/lilthing/static/css/main.bb4e4f1f.css",
+    "main.js": "/lilthing/static/js/main.77205738.js",
+    "static/js/787.2f8f018e.chunk.js": "/lilthing/static/js/787.2f8f018e.chunk.js",
+    "static/media/spotifyapp.png": "/lilthing/static/media/spotifyapp.a62be7ef59b283472699.png",
+    "static/media/Resume.pdf": "/lilthing/static/media/Resume.934cbb4a179560383892.pdf",
+    "static/media/logo.svg": "/lilthing/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/lilthing/index.html",
+    "main.bb4e4f1f.css.map": "/lilthing/static/css/main.bb4e4f1f.css.map",
+    "main.77205738.js.map": "/lilthing/static/js/main.77205738.js.map",
+    "787.2f8f018e.chunk.js.map": "/lilthing/static/js/787.2f8f018e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb4e4f1f.css",
+    "static/js/main.77205738.js"
+  ]
+}
