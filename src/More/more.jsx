@@ -19,7 +19,7 @@ const Me = () => {
             <p data-aos="fade-in"  data-aos-delay="1000">  &nbsp; I'm Kevin. </p>
             <p data-aos="fade-in"  data-aos-delay="2000">  &nbsp; I'm currently a first year Computer Science student at the University of Waterloo. </p>
             </div>
-            <p data-aos="fade-in" data-aos-delay="3000" className="align-center"> &nbsp; Welcome to my corner of the internet. </p>
+            <p data-aos="fade-in" data-aos-delay="3000" className="align-center"> &nbsp; Welcome to my corner of the internet! </p>
             <div data-aos="fade-in" data-aos-delay="4000">
             {full === true ? 
             <div className="relative">
@@ -46,17 +46,29 @@ const Projects = () => {
     aos.init({duration: 1500})
   },[])
   return(   
-    <div className='flex flex-wrap
-          mt-6 mx-auto w-2/4 h-2/4 ' >
-            <p>Recently, I've built a web app, <NavLink to="/spotifyrecs" data-aos="fade-in"  data-aos-delay="150" className="hover:font-bold"
-           > &nbsp; [Spotify Discover Weekly Whenever], </NavLink>
+    <div className='flex flex-wrap text-left
+          mt-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl' >
+            <p>This summer, I built a web app, <a href="https://github.com/kevinyvv/spotify-react" target="_blank" data-aos="fade-in"  data-aos-delay="150" className="font-bold"
+           > &nbsp; [Spotify Discover Weekly Whenever], </a>
             that allows you to get song recommendations whenever. I plan on adding more features to it eventually. </p>
            <p className="">
+             Recently, I've also made an &nbsp;
+              <a href="https://github.com/kevinyvv/Email-Manager" target="_blank" data-aos="fade-in"  data-aos-delay="150" className="font-bold">
+                [Email Manager]
+              </a>
+
+              &nbsp; that uses AI to determine whether to delete emails or automatically draft a response.
+             The idea isn't exactly game-changing, but I was able to learn how to:
+              use and connect PostgreSQL to a React frontend and make my own REST API endpoints with Flask.
+            {/*
             Inspired by how the Spotify Recommendation Algorithm works, 
             I'm currently creating a
             <NavLink to="/mangaproject" data-aos="fade-in"  data-aos-delay="150" className="hover:font-bold"
            >  [Manga Project], </NavLink>
-            with the hopes of using it to find new recommendations for myself.
+  with the hopes of using it to find new recommendations for myself.*/}
+           </p>
+           <p data-aos="fade-in"  data-aos-delay="150">
+            Now, it's time to decide what I will make next...
            </p>
     </div>
   )
@@ -109,13 +121,15 @@ const Interests = () => {
       <p> I'm currently interested in: &nbsp; </p>
       <TypeAnimation
       sequence={[
-        'improving my coding skills',
+        'improving my leetcode skills',
         1000, 
         'cats!!',
         1000,
         'finding new manga to read',
         1000,
         'relearning the piano',
+        1000,
+        'exploring internet rabbit holes on computer history',
         1000
       ]}
       wrapper="span"

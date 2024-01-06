@@ -10,6 +10,7 @@ import {
 import aos from 'aos';
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import mascot from "./mascot.png"
 
 const Main = () => {
   useEffect(()=> {
@@ -17,6 +18,11 @@ const Main = () => {
   },[])
   return (
     <div className="w-screen h-screen bg-[#fffaf0]">
+      <div className="fixed inset-0 flex items-baseline justify-center top-[20%]">
+        <button onClick={()=>window.location.reload()}>
+          <img src={mascot} height={100} width={100} data-aos="flip-right" data-aos-delay="300" />
+        </button>
+      </div>
       <text></text>
       <header className="relative -bottom-1/3 
       text-black font-bold text-4xl md:text-5xl lg:text-6xl text-center">
