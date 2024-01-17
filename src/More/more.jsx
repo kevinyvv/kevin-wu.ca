@@ -156,7 +156,7 @@ const More = () => {
         <section id='more' className="relative top-1/3
         text-center mt-4 mb-6 md:mb-12 font-tnr text-md sm:text-lg md:text-xl">
           <div className="flex justify-center">
-          <p> about my: </p>
+          <p className="font-bold"> about my: </p>
           <button data-aos="fade-in"  data-aos-delay="300"
           className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("me")}> self </button>
           <button data-aos="fade-in" data-aos-delay="600"
