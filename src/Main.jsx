@@ -7,7 +7,7 @@ import {
   FaEnvelope,
   FaFileAlt
 } from 'react-icons/fa'
-import aos from 'aos';
+import AOS from 'aos';
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import mascot from "./mascot.png";
@@ -16,9 +16,14 @@ import Stars from './stars';
 
 const Main = () => {
   useEffect(()=> {
-    aos.init({duration: 1500})
+    window.addEventListener('load', AOS.refresh)
+    AOS.init({
+      duration: 1500,
+      startEvent: 'load'
+    })
   },[])
   return (
+    
     <div className="w-full h-screen overflow-auto dark:bg-[#0a0e23] bg-[#fffaf0]">
             <Stars/>
             <ModeSwitch/>
@@ -29,7 +34,6 @@ const Main = () => {
             </button>
             <h1 className='text-black dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl text-center'> Kevin Wu </h1>
         </div>
-
         <div className='flex justify-center space-x-2 my-2 mt-6'>
         <NavLink to="/Resume" data-aos="fade-in"  data-aos-delay="1200" > 
         <FaFileAlt className="hover:scale-105" size ={28}/> </NavLink>

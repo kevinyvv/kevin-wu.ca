@@ -1,5 +1,4 @@
 import Particles from "react-tsparticles";
-// import { loadFull } from "tsparticles";
 import React, { useCallback } from "react";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 
