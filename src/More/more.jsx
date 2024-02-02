@@ -17,7 +17,7 @@ const Me = () => {
   },[])
   return(   
           <div className='
-          mt-6 mx-auto w-2/4 h-2/4 bg-[#fffaf0] text-sm md:text-lg lg:text-xl' >
+          mt-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl' >
             <div className="flex flex-wrap">
             <p data-aos="fade-in"> Hello, </p>
             <p data-aos="fade-in"  data-aos-delay="1000">  &nbsp; I'm Kevin. </p>
@@ -127,7 +127,7 @@ const Interests = () => {
   },[])
   return(   
     <div className=' flex flex-wrap
-    mt-6 mx-auto w-2/4 h-2/4 bg-[#fffaf0] text-sm md:text-lg lg:text-xl' >
+    mt-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl' >
       <p> I'm currently interested in: &nbsp; </p>
       <TypeAnimation
       sequence={[
@@ -164,7 +164,7 @@ const More = () => {
     
     return(
         <section id='more' className="relative top-1/3
-        text-center mt-4 mb-6 md:mb-12 font-tnr text-md sm:text-lg md:text-xl">
+        text-center mt-4 mb-6 md:mb-12 font-tnr text-md sm:text-lg md:text-xl dark:text-white">
           <div className="flex justify-center">
           <p className="font-bold"> about my: </p>
           <button data-aos="fade-in"  data-aos-delay="300"
