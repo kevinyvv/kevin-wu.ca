@@ -17,16 +17,15 @@ const Main = () => {
     aos.init({duration: 1500})
   },[])
   return (
-    <div className="w-screen h-screen bg-[#fffaf0]">
-      <div className="fixed inset-0 flex items-baseline justify-center top-[20%]">
-        <button onClick={()=>window.location.reload()}>
-          <img src={mascot} height={100} width={100} data-aos="flip-right" data-aos-delay="300" />
-        </button>
-      </div>
-      <text></text>
-      <header className="relative -bottom-1/3 
-      text-black font-bold text-4xl md:text-5xl lg:text-6xl text-center">
-        Kevin Wu
+    <div className="w-full h-screen bg-[#fffaf0] overflow-auto">
+      <div className="relative -bottom-1/3 flex flex-col">
+        <div className='flex flex-col justify-center items-center'>
+            <button onClick={()=>window.location.reload()} className=''>
+              <img src={mascot} height={100} width={100} data-aos="flip-right" data-aos-delay="300" />
+            </button>
+            <h1 className='text-black font-bold text-4xl md:text-5xl lg:text-6xl text-center'> Kevin Wu </h1>
+        </div>
+
         <div className='flex justify-center space-x-2 my-2 mt-6'>
         <NavLink to="/Resume" data-aos="fade-in"  data-aos-delay="1200" > 
         <FaFileAlt className="hover:scale-105" size ={28}/> </NavLink>
@@ -37,7 +36,7 @@ const Main = () => {
         <a data-aos="fade-in"  data-aos-delay="300"
         href="mailto:kwu4578@gmail.com"> <FaEnvelope className="hover:scale-105" size ={31}/> </a> 
         </div>
-      </header>
+      </div>
       
       <More/>
     </div>

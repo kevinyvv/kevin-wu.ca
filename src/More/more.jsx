@@ -5,6 +5,10 @@ import { TypeAnimation } from "react-type-animation";
 import ReadMoreReact from 'read-more-react';
 import ReactTyped from "react-typed";
 import { NavLink } from "react-router-dom";
+import Projectcontainer from "./projectcontainer";
+import mascot from '../mascot.png';
+import memoir from './memoir.png';
+import spotify from './spotify.png'
 
 const Me = () => {
   const [full, setFull] = useState(false);
@@ -46,30 +50,36 @@ const Projects = () => {
     aos.init({duration: 1500})
   },[])
   return(   
-    <div className='flex flex-wrap text-left
-          mt-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl' >
+    <div className='flex flex-col text-center justify-center
+          my-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl space-y-8' >
+            Check out some of my projects below!
+            {/*
             <p>This summer, I built a web app, <a href="https://github.com/kevinyvv/spotify-react" target="_blank" data-aos="fade-in"  data-aos-delay="150" className="font-bold"
            > &nbsp; [Spotify Discover Weekly Whenever], </a>
-            that allows you to get song recommendations whenever. I plan on adding more features to it eventually. </p>
-           <p className="">
+            that allows you to get song recommendations whenever. I plan on adding more features to it eventually.
              Recently, I've also made an &nbsp;
               <a href="https://github.com/kevinyvv/Email-Manager" target="_blank" data-aos="fade-in"  data-aos-delay="150" className="font-bold">
                 [Email Manager]
               </a>
-
               &nbsp; that uses AI to determine whether to delete emails or automatically draft a response.
              The idea isn't exactly game-changing, but I was able to learn how to:
               use and connect PostgreSQL to a React frontend and make my own REST API endpoints with Flask.
-            {/*
+            
             Inspired by how the Spotify Recommendation Algorithm works, 
             I'm currently creating a
             <NavLink to="/mangaproject" data-aos="fade-in"  data-aos-delay="150" className="hover:font-bold"
            >  [Manga Project], </NavLink>
-  with the hopes of using it to find new recommendations for myself.*/}
+  with the hopes of using it to find new recommendations for myself.
            </p>
            <p data-aos="fade-in"  data-aos-delay="150">
             Now, it's time to decide what I will make next...
            </p>
+           */}
+           <div className="space-y-4 mb-8" data-aos="fade-in"  data-aos-delay="150">
+           <Projectcontainer title='Memoir' imag = {memoir} description = "Social media app prototype linking users by past memories." link="https://github.com/kevinyvv/memoir"/>
+           <Projectcontainer title='EmailManager' imag = {mascot} description = "Automated email manager with automated AI-generated replies." link="https://github.com/kevinyvv/Email-Manager"/>
+           <Projectcontainer title='Spotify Recommendations' imag = {spotify} description = "Web app to get new Spotify recommendations whenever." link="https://github.com/kevinyvv/spotify-react"/>
+           </div>
     </div>
   )
 
@@ -80,7 +90,7 @@ const Awards = () => {
     aos.init({duration: 1500})
   },[])
   return(   
-    <div className='
+    <div className='flex justify-center text-sm md:text-lg lg:text-xl
          mx-auto w-2/4 h-2/4' >
   <table class="border-separate border-spacing-x-16 border-spacing-y-6">
   <thead>

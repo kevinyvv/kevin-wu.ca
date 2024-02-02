@@ -12,7 +12,7 @@ import Res from './Resume/Resume';
 
 function App() {
   return (
-    <div className="w-screen h-screen bg-[#fffaf0]">
+    <div className="w-full h-full bg-[#fffaf0]">
       <Navigation/>
       <Routes>
         <Route path = '/' element = {<Main/>}/>
