@@ -19,14 +19,16 @@ const Main = () => {
   useEffect(()=> {
     window.addEventListener('load', AOS.refresh)
     AOS.init({
-      duration: 1500,
+      duration: 1000,
       startEvent: 'load'
     })
   })
   return (
     
     <div className="w-full h-screen overflow-auto dark:bg-[#0a0e23] bg-[#fffaf0]">
+            <BrowserView>
             <Stars/>
+            </BrowserView>
             <ModeSwitch/>
       <div className="relative -bottom-1/3 flex flex-col dark:text-white">
         <div className='flex flex-col justify-center items-center'>
