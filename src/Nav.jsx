@@ -23,7 +23,7 @@ const Navigation = () => {
     <div className='fixed top-4 left-4'>
     <nav>
         <ul>
-            <li> <NavLink to="/" onClick={() => handleClick()}> <FaHome className="hover:scale-105" size = {30}>  </FaHome></NavLink></li>
+            <li> <NavLink reloadDocument to="/" onClick={() => handleClick()}> <FaHome className="hover:scale-105" size = {30}>  </FaHome></NavLink></li>
         </ul>
     </nav>
     </div>
