@@ -15,7 +15,7 @@ const Me = () => {
   useEffect(()=> {
     window.addEventListener('load', AOS.refresh)
     AOS.init({
-      duration: 1500,
+      duration: 1000,
       startEvent: 'load'
     })
   },[])
@@ -97,7 +97,7 @@ const Awards = () => {
   useEffect(()=> {
     window.addEventListener('load', AOS.refresh)
     AOS.init({
-      duration: 1500,
+      duration: 1000,
       startEvent: 'load'
     })
   },[])
@@ -137,7 +137,7 @@ const Interests = () => {
   useEffect(()=> {
     window.addEventListener('load', AOS.refresh)
     AOS.init({
-      duration: 1500,
+      duration: 1000,
       startEvent: 'load'
     })
   },[])
@@ -176,7 +176,7 @@ const More = () => {
   useEffect(()=> {
     window.addEventListener('load', AOS.refresh)
     AOS.init({
-      duration: 1500,
+      duration: 1000,
       startEvent: 'load'
     })
   })
