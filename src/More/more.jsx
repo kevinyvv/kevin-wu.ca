@@ -14,7 +14,6 @@ const Me = () => {
   const [full, setFull] = useState(false);
   useEffect(()=> {
     window.addEventListener('load', AOS.refresh)
-    window.addEventListener('load', AOS.refresh)
     AOS.init({
       duration: 1500,
       startEvent: 'load'
@@ -86,7 +85,7 @@ const Projects = () => {
            */}
            <div className="space-y-4 mb-8" data-aos="fade-in"  data-aos-delay="150">
            <Projectcontainer title='Memoir' imag = {memoir} description = "Social media app prototype linking users by past memories." link="https://github.com/kevinyvv/memoir"/>
-           <Projectcontainer title='EmailManager' imag = {mascot} description = "Automated email manager with automated AI-generated replies." link="https://github.com/kevinyvv/Email-Manager"/>
+           <Projectcontainer title='EmailManager' imag = {mascot} description = "Email manager with automated AI-generated replies." link="https://github.com/kevinyvv/Email-Manager"/>
            <Projectcontainer title='Spotify Recommendations' imag = {spotify} description = "Web app to get new Spotify recommendations whenever." link="https://github.com/kevinyvv/spotify-react"/>
            </div>
     </div>
