@@ -180,7 +180,7 @@ const More = () => {
       startEvent: 'load'
     })
   })
-    const [selected, setSelected] = useState(null)
+    const [selected, setSelected] = useState("me")
     
     return(
         <section id='more' className="relative top-1/3
