@@ -1,5 +1,5 @@
 import React, {Fragment, useEffect, useState} from "react";
-import aos from 'aos';
+import AOS from 'aos';
 import 'aos/dist/aos.css'
 import { TypeAnimation } from "react-type-animation";
 import ReadMoreReact from 'read-more-react';
@@ -13,7 +13,11 @@ import spotify from './spotify.png'
 const Me = () => {
   const [full, setFull] = useState(false);
   useEffect(()=> {
-    aos.init({duration: 1500})
+    window.addEventListener('load', AOS.refresh)
+    AOS.init({
+      duration: 1500,
+      startEvent: 'load'
+    })
   },[])
   return(   
           <div className='
@@ -47,7 +51,11 @@ const Me = () => {
 
 const Projects = () => {
   useEffect(()=> {
-    aos.init({duration: 1500})
+    window.addEventListener('load', AOS.refresh)
+    AOS.init({
+      duration: 1500,
+      startEvent: 'load'
+    })
   },[])
   return(   
     <div className='flex flex-col text-center justify-center
@@ -87,7 +95,11 @@ const Projects = () => {
 
 const Awards = () => {
   useEffect(()=> {
-    aos.init({duration: 1500})
+    window.addEventListener('load', AOS.refresh)
+    AOS.init({
+      duration: 1500,
+      startEvent: 'load'
+    })
   },[])
   return(   
     <div className='flex justify-center text-sm md:text-lg lg:text-xl
@@ -123,7 +135,11 @@ const Awards = () => {
 
 const Interests = () => {
   useEffect(()=> {
-    aos.init({duration: 1500})
+    window.addEventListener('load', AOS.refresh)
+    AOS.init({
+      duration: 1500,
+      startEvent: 'load'
+    })
   },[])
   return(   
     <div className=' flex flex-wrap
@@ -157,9 +173,13 @@ const Interests = () => {
 }
 
 const More = () => {
-    useEffect(()=> {
-        aos.init({duration: 1500})
-      },[])
+  useEffect(()=> {
+    window.addEventListener('load', AOS.refresh)
+    AOS.init({
+      duration: 1500,
+      startEvent: 'load'
+    })
+  },[])
     const [selected, setSelected] = useState(null)
     
     return(
