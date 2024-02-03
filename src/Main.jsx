@@ -13,6 +13,7 @@ import { NavLink } from 'react-router-dom';
 import mascot from "./mascot.png";
 import ModeSwitch from './sunandmoon';
 import Stars from './stars';
+import { BrowserView } from 'react-device-detect'
 
 const Main = () => {
   useEffect(()=> {
@@ -35,8 +36,10 @@ const Main = () => {
             <h1 className='text-black dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl text-center'> Kevin Wu </h1>
         </div>
         <div className='flex justify-center space-x-2 my-2 mt-6'>
+        <BrowserView>
         <NavLink to="/Resume" data-aos="fade-in"  data-aos-delay="1200" > 
         <FaFileAlt className="hover:scale-105" size ={28}/> </NavLink>
+        </BrowserView>
         <a data-aos="fade-in"  data-aos-delay="900"
         href="https://www.linkedin.com/in/wuyukun" target="_blank"><FaLinkedin className="hover:scale-105" size = {30}/> </a>
         <a data-aos="fade-in"  data-aos-delay="600"
