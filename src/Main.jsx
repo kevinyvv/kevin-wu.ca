@@ -21,7 +21,7 @@ const Main = () => {
       duration: 1500,
       startEvent: 'load'
     })
-  },[])
+  })
   return (
     
     <div className="w-full h-screen overflow-auto dark:bg-[#0a0e23] bg-[#fffaf0]">

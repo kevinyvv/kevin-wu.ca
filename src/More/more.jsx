@@ -14,6 +14,7 @@ const Me = () => {
   const [full, setFull] = useState(false);
   useEffect(()=> {
     window.addEventListener('load', AOS.refresh)
+    window.addEventListener('load', AOS.refresh)
     AOS.init({
       duration: 1500,
       startEvent: 'load'
@@ -179,7 +180,7 @@ const More = () => {
       duration: 1500,
       startEvent: 'load'
     })
-  },[])
+  })
     const [selected, setSelected] = useState(null)
     
     return(
