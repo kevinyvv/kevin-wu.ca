@@ -8,8 +8,16 @@ module.exports = {
       'tnr': ['"EB Garamond"', 'serif'] 
     },
     extend: {
+      transitionDuration: {
+        '1500': '1500ms',
+        '2000': '2000ms',
+        '3000': '3000ms',
+        '4000': '4000ms',
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animate'),
+  ],
   darkMode: 'class',
 }

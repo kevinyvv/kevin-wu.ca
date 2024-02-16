@@ -12,26 +12,17 @@ import spotify from './spotify.png'
 
 const Me = () => {
   const [full, setFull] = useState(false);
-  useEffect(()=> {
-    window.addEventListener('load', AOS.refresh)
-    AOS.init({
-      duration: 1000,
-      startEvent: 'load'
-    })
-  },[])
   return(   
           <div className='
           mt-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl' >
             <div className="flex flex-wrap">
-            <p data-aos="fade-in"> Hello, </p>
-            <p data-aos="fade-in"  data-aos-delay="1000">  &nbsp; I'm Kevin. </p>
-            <p data-aos="fade-in"  data-aos-delay="2000">  &nbsp; I'm currently a first year Computer Science student at the University of Waterloo. </p>
+            <p> Hi there, </p>
+            <p>  &nbsp; I'm Kevin. I'm currently a first year Computer Science student at the University of Waterloo. Welcome to my corner of the internet! </p>
             </div>
-            <p data-aos="fade-in" data-aos-delay="3000" className="align-center"> &nbsp; Welcome to my corner of the internet! </p>
-            <div data-aos="fade-in" data-aos-delay="4000">
+            <div>
             {full === true ? 
             <div className="relative">
-            <p data-aos="fade-in" data-aos-delay="200" className="">
+            <p className="">
               Some quick things about myself: I like reading manga, going to the gym, and coding (pretty basic right?).
               Regarding school and work, I'm pretty much open to learning about and working on anything related to computer science right now.
               There's so many possibilities, which is really cool. 
@@ -50,13 +41,6 @@ const Me = () => {
 }
 
 const Projects = () => {
-  useEffect(()=> {
-    window.addEventListener('load', AOS.refresh)
-    AOS.init({
-      duration: 1500,
-      startEvent: 'load'
-    })
-  },[])
   return(   
     <div className='flex flex-col text-center justify-center
           my-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl space-y-8' >
@@ -83,7 +67,7 @@ const Projects = () => {
             Now, it's time to decide what I will make next...
            </p>
            */}
-           <div className="space-y-4 mb-8" data-aos="fade-in"  data-aos-delay="150">
+           <div className="space-y-4 mb-8">
            <Projectcontainer title='Memoir' imag = {memoir} description = "Social media app prototype linking users by past memories." link="https://github.com/kevinyvv/memoir"/>
            <Projectcontainer title='EmailManager' imag = {mascot} description = "Email manager with automated AI-generated replies." link="https://github.com/kevinyvv/Email-Manager"/>
            <Projectcontainer title='Spotify Recommendations' imag = {spotify} description = "Web app to get new Spotify recommendations whenever." link="https://github.com/kevinyvv/spotify-react"/>
@@ -93,57 +77,11 @@ const Projects = () => {
 
 }
 
-const Awards = () => {
-  useEffect(()=> {
-    window.addEventListener('load', AOS.refresh)
-    AOS.init({
-      duration: 1000,
-      startEvent: 'load'
-    })
-  },[])
-  return(   
-    <div className='flex justify-center text-sm md:text-lg lg:text-xl
-         mx-auto w-2/4 h-2/4' >
-  <table class="border-separate border-spacing-x-16 border-spacing-y-6">
-  <thead>
-    <tr>
-      <th  class="">Award</th>
-      <th  class="">Awarded by:</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-aos="fade-in"  data-aos-delay="75" class="px-1 underline underline-offset-2">
-       <a href="https://uwaterloo.ca/undergraduate-entrance-awards/awards/mathematics-national-scholarships">  National Math Scholarship </a>
-        </td>
-        <td data-aos="fade-in"  data-aos-delay="150" class="px-1 hover:scale-105">
-        <a href="https://uwaterloo.ca/"> The University of Waterloo </a></td>
-    </tr>
-    <tr>
-      <td data-aos="fade-in"  data-aos-delay="150" class="px-1 underline underline-offset-2">
-        <a href="https://uwaterloo.ca/future-students/financing/scholarships#available-to-all">President's Scholarship of Distinction </a>
-        </td> 
-      <td data-aos="fade-in"  data-aos-delay="150" class="px-1">
-        <a href="https://uwaterloo.ca/"> The University of Waterloo </a></td>
-    </tr>
-  </tbody>
-</table>
-          </div>
-  )
-
-}
 
 const Interests = () => {
-  useEffect(()=> {
-    window.addEventListener('load', AOS.refresh)
-    AOS.init({
-      duration: 1000,
-      startEvent: 'load'
-    })
-  },[])
   return(   
-    <div className=' flex flex-wrap
-    mt-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl' >
+    <div className=' flex flex-wrap justify-center
+    mt-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl text-center' >
       <p> I'm currently interested in: &nbsp; </p>
       <TypeAnimation
       sequence={[
@@ -164,7 +102,7 @@ const Interests = () => {
     />
     <p> Feel free to shoot me a message about anything regarding my interests! If you want to see more insight on these interests, feel free to 
       access them here: &nbsp;
-      <NavLink to="/interests" data-aos="fade-in"  data-aos-delay="1500" className="hover:font-bold"
+      <NavLink to="/interests" className="hover:font-bold"
            > [interests] </NavLink>
     </p>
     </div>
@@ -173,34 +111,24 @@ const Interests = () => {
 }
 
 const More = () => {
-  useEffect(()=> {
-    window.addEventListener('load', AOS.refresh)
-    AOS.init({
-      duration: 1000,
-      startEvent: 'load'
-    })
-  })
     const [selected, setSelected] = useState("me")
     
     return(
         <section id='more' className="relative top-1/3
         text-center mt-4 mb-6 md:mb-12 font-tnr text-md sm:text-lg md:text-xl dark:text-white">
-          <div className="flex justify-center">
+          <div className="flex justify-center h-min">
           <p className="font-bold"> about my: </p>
-          <button data-aos="fade-in"  data-aos-delay="300"
+          <button 
           className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("me")}> self </button>
-          <button data-aos="fade-in" data-aos-delay="600"
+          <button 
           className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("interests")}> current interests </button>
-          <button data-aos="fade-in" data-aos-delay="900"
+          <button 
           className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("projects")}> projects</button>
-          <button data-aos="fade-in" data-aos-delay="1200"
-          className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("awards")}> awards </button>
           </div>
           <div className="flex: justify-center align-center backdrop-blur-sm">
                 {selected === "me" ? <Me/> : "" }
                 {selected === "interests" ? <Interests/> :"" }
                 {selected === "projects" ? <Projects/> :"" }
-                {selected === "awards" ? <Awards/> :"" }
                 {selected === null ? "" :"" }
           </div>
         </section>

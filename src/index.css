@@ -11,11 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body[data-aos-delay="4000"] [data-aos],
-[data-aos][data-aos][data-aos-delay="4000"] {
-  @apply delay-[4000ms];
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
