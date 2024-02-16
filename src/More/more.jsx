@@ -119,11 +119,11 @@ const More = () => {
           <div className="flex justify-center h-min">
           <p className="font-bold"> about my: </p>
           <button 
-          className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("me")}> self </button>
+          className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("me")}> [self] </button>
           <button 
-          className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("interests")}> current interests </button>
+          className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("interests")}> [current interests] </button>
           <button 
-          className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("projects")}> projects</button>
+          className="mr-3 md:mr-6 focus:font-bold" onClick={() => setSelected("projects")}> [projects] </button>
           </div>
           <div className="flex: justify-center align-center backdrop-blur-sm">
                 {selected === "me" ? <Me/> : "" }
