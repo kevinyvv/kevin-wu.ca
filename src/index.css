@@ -15,3 +15,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer components {
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    @apply mx-auto min-w-0 h-[25svh] flex-[0_0_75%] md:flex-[0_0_60%] xl:flex-[0_0_50%]
+  }
+  
+}

@@ -20,7 +20,7 @@ const Main = () => {
     <div className="w-full h-screen overflow-auto dark:bg-[#0a0e23] bg-[#fffaf0]">
             <Stars/>
             <ModeSwitch/>
-      <div className="relative -bottom-1/3 flex flex-col dark:text-white">
+      <div className="relative top-[15%] flex flex-col dark:text-white">
         <div className='flex flex-col justify-center items-center'>
             <button onClick={()=>window.location.reload()} className='rounded-full dark:shadow-2xl dark:shadow-yellow-500'>
               <img src={mascot} height={100} width={100} />

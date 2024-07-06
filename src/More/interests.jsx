@@ -19,7 +19,7 @@ import { useEffect, Fragment } from 'react';
         className='font-bold text-xl md:text-2xl lg:text-3xl mt-16'> ?? </h3>
         <p data-aos="fade-in"  data-aos-delay="600"
         className='mt-12 text-center mb-12 w-auto px-40'> 
-        Currently writing about my interests! this section will be added soon.
+        Currently writing! This section will be added soon.
         </p>
         <p>[work in progress]</p>
         </div>
