@@ -21,20 +21,20 @@ const Me = () => {
   return(   
     <div className='mt-6 mx-auto w-2/3 min-h-fit text-sm md:text-lg lg:text-xl'>
     <div className="text-start">
-      <p>Hi there, I'm Kevin. I'm a <span className="font-bold font-tnr italic cursor-pointer">Computer Science </span> student at the University of Waterloo. 
+      <p>Hi there, I'm Kevin. I'm a <span className="font-bold font-tnr italic cursor-pointer pr-1">Computer Science </span> student at the University of Waterloo. 
       Currently, I'm working as a Software Developer at Safuture.
 
       </p>
       <p className="my-6"> 
-      <button className="font-bold font-tnr italic"
+      <button className="font-bold font-tnr italic pr-1"
       onClick={()=> {}}>
          Welcome 
-         </button>  &nbsp; to my corner of the internet!</p>
+         </button> to my corner of the internet!</p>
     </div>
 
     <div className="text-start">
       <p> In terms of software, I've had the most experience with full-stack work.
-        Recently though, I've been trying out game development, and I've been working on <span className="font-bold font-tnr italic cursor-pointer"> creating a game </span> with friends.
+        Recently though, I've been trying out game development, and I've been working on <span className="font-bold font-tnr italic cursor-pointer pr-1"> creating a game </span> with friends.
         You can check out some of my work below, and see my experiences on my <NavLink to="/Resume" className="font-bold font-tnr italic"> Resume </NavLink>.
       </p>
     </div>
@@ -56,7 +56,7 @@ const Projects = () => {
   }, [emblaApi])
 
   return(   
-    <div className="embla flex w-full">
+    <div className="embla flex w-2/3 mx-auto">
 
     <button className="embla__prev xl:invisible" onClick={scrollPrev}>
         <FaChevronLeft />
@@ -114,12 +114,12 @@ const Hobbies = () => {
       
       </p>
       <p className="my-6">
-        Apart from my current interests, I also like reading (<a target='_blank' href='https://myanimelist.net/mangalist/milkedchicken' className="font-bold font-tnr italic"> manga </a> &nbsp;and books), swimming, and going to the gym.
+        Apart from my current interests, I also like reading (<a target='_blank' href='https://myanimelist.net/mangalist/milkedchicken' className="font-bold font-tnr italic pr-1 -ml-1"> manga </a> and books), swimming, and going to the gym.
       </p>
       <p className="my-6">
         I've also played a lot of Supercell games  as a teen, and I'm about to 
-        max out in <a target="_blank" href='https://link.clashofclans.com/en?action=OpenPlayerProfile&tag=8QGLL2JV0' className="font-bold font-tnr italic"> Clash of Clans. </a> I haven't had 
-        as much time recently, but I used to play the other games as well (add my sc id @kingkevin) :'(
+        max out in <a target="_blank" href='https://link.clashofclans.com/en?action=OpenPlayerProfile&tag=8QGLL2JV0' className="font-bold font-tnr italic pr-1"> Clash of Clans. </a> I haven't had 
+        as much time recently, but I used to play the other games as well (add my sc id @kingkevin)
       </p>
     </div>
 
@@ -144,9 +144,9 @@ const Self = () => {
       </p>
       <img
       src = {cat}
-      className="mx-auto"
+      className="mx-auto my-6"
       />
-      <p className="mt-6">
+      <p className="">
       Thanks for visiting!
       </p>
     </div>
