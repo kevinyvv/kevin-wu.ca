@@ -8,10 +8,13 @@ import SpotifyRec from './Projects/SpotifyRec'
 import Projecttwo from './Projects/MangaProjects';
 import Interests from './More/interests';
 import Res from './Resume/Resume';
+import CustomCursor from './CustomCursor';
 
 function App() {
+
   return (
-    <div className="w-full h-full bg-[#fffaf0]">
+    <div className="w-full h-full bg-[#fffaf0] cursor md:cursor-none">
+      <CustomCursor/>
       <Navigation/>
       <Routes>
         <Route path = '/' element = {<Main/>}/>
