@@ -5,9 +5,11 @@ const Projectcontainer = ( {title, imag, description, link, stack} ) => {
 
   return (
 
-    <div className='mt-4 max-w-full min-h-[20svh] max-h-[20svh] w-full
+    <div className='mt-4 max-w-full min-h-[15svh] max-h-[20svh]
     rounded-lg border border-gray-300 flex flex-col shadow-gray-500 hover:scale-[101%]
-    shadow-md p-4'>
+    shadow-md p-4
+    xl:h-[25svh]
+    '>
         <div className='flex justify-between items-center'>
             <h1 className='font-bold mx-auto
             text-sm sm:text-md md:text-lg lg:text-xl'> {title} </h1>

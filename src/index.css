@@ -18,13 +18,21 @@ code {
 
 @layer components {
   .embla {
-    overflow: hidden;
   }
   .embla__container {
     display: flex;
   }
   .embla__slide {
-    @apply mx-auto min-w-0 h-[25svh] flex-[0_0_75%] md:flex-[0_0_60%] xl:flex-[0_0_50%]
+    @apply mx-auto min-w-0 h-[25svh] flex-[0_0_75%] md:flex-[0_0_60%] xl:flex-[0_0_33%]
+  }
+  .embla__viewport {
+    overflow: hidden;
+  }
+  .embla__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    align-items: center;
   }
   
 }

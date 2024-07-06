@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React, {Fragment, useEffect, useState, useCallback } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import { TypeAnimation } from "react-type-animation";
@@ -6,6 +6,7 @@ import ReadMoreReact from 'read-more-react';
 import ReactTyped from "react-typed";
 import { NavLink } from "react-router-dom";
 import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from "embla-carousel-autoplay";
 
 import Projectcontainer from "./projectcontainer";
 import mascot from '../mascot.png';
@@ -13,11 +14,12 @@ import memoir from './memoir.png';
 import spotify from './spotify.png'
 import cat from './cat.png'
 
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+
 const Me = () => {
-  
-  const [emblaRef] = useEmblaCarousel({ loop: true })
+
   return(   
-    <div className='mt-6 mx-auto w-2/3 h-[50svh] text-sm md:text-lg lg:text-xl'>
+    <div className='mt-6 mx-auto w-2/3 min-h-fit text-sm md:text-lg lg:text-xl'>
     <div className="text-start">
       <p>Hi there, I'm Kevin. I'm a <span className="font-bold font-tnr italic cursor-pointer">Computer Science </span> student at the University of Waterloo. 
       Currently, I'm working as a Software Developer at Safuture.
@@ -36,9 +38,31 @@ const Me = () => {
         You can check out some of my work below, and see my experiences on my <NavLink to="/Resume" className="font-bold font-tnr italic"> Resume </NavLink>.
       </p>
     </div>
-    <div>
-    </div>
-    <div className="embla mt-[5svh]" ref={emblaRef}>
+  </div>
+  
+  )
+}
+
+const Projects = () => {
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()])
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev()
+  }, [emblaApi])
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext()
+  }, [emblaApi])
+
+  return(   
+    <div className="embla flex w-full">
+
+    <button className="embla__prev xl:invisible" onClick={scrollPrev}>
+        <FaChevronLeft />
+      </button> 
+
+    <div className="embla__viewport mt-[5svh]" ref={emblaRef}>
       <div className="embla__container space-x-4">
         <div className="embla__slide">
         <Projectcontainer 
@@ -66,26 +90,14 @@ const Me = () => {
          link="https://github.com/kevinyvv/spotify-react"
         stack={['React']}/>
         </div>
+
       </div>
     </div>
 
-  </div>
-  
-  )
-}
-
-const Projects = () => {
-
-  const [emblaRef] = useEmblaCarousel()
-  return(   
-    <div className='flex flex-col text-center justify-center
-          my-6 mx-auto w-2/4 h-2/4 text-sm md:text-lg lg:text-xl space-y-8' >
-            Check out some of my projects below!
-           <div className="space-y-4 mb-8">
-           <Projectcontainer title='Memoir' imag = {memoir} description = "Social media app prototype linking users by past memories." link="https://github.com/kevinyvv/memoir"/>
-           <Projectcontainer title='EmailManager' imag = {mascot} description = "Email manager with automated AI-generated replies." link="https://github.com/kevinyvv/Email-Manager"/>
-           <Projectcontainer title='Spotify Recommendations' imag = {spotify} description = "Web app to get new Spotify recommendations whenever." link="https://github.com/kevinyvv/spotify-react"/>
-           </div>
+    <button className="embla__next xl:invisible" onClick={scrollNext}>
+        <FaChevronRight/>
+    </button>
+    
     </div>
   )
 
@@ -148,7 +160,7 @@ const More = () => {
     const [selected, setSelected] = useState("work")
     
     return(
-        <section id='more' className="relative top-[15%]
+        <section id='more' className="relative top-[12%]
         text-center mt-4 mb-6 md:mb-12 text-md sm:text-lg md:text-xl dark:text-white">
           <div className="flex justify-center h-min">
             <p className="font-bold"> about my &nbsp; </p>
@@ -173,7 +185,12 @@ const More = () => {
             </button>
           </div>
           <div className="flex: justify-center align-center backdrop-blur-sm">
-                {selected === "work" ? <Me/> : "" }
+                {selected === "work" ? 
+                  <div>
+                    <Me/>
+                    <Projects/>
+                   </div>
+                  : "" }
                 {selected === "hobbies" ? <Hobbies/> :"" }
                 {selected === "self" ? <Self/> :"" }
                 {selected === null ? "" :"" }
