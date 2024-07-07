@@ -5,7 +5,7 @@ const Projectcontainer = ( {title, imag, description, link, stack} ) => {
 
   return (
 
-    <div className='mt-4 max-w-full min-h-[15svh] h-[30svh]
+    <div className='mt-4 max-w-full min-h-[20svh] max-h-[30svh]
     rounded-lg border border-gray-300 flex flex-col shadow-gray-500 hover:scale-[101%]
     shadow-md p-4
     xl:h-[25svh]
@@ -17,7 +17,7 @@ const Projectcontainer = ( {title, imag, description, link, stack} ) => {
         </div>
         <div className='flex justify-between mt-2'>
             <img src={imag}  alt="Project Image" className="project-images h-12 w-12 lg:w-20 lg:h-20 rounded-lg"/>
-            <p className='ml-4 h-[10svh] w-full text-start text-sm lg:text-md overflow-auto'> 
+            <p className='ml-4 h-[10svh] w-full text-start text-sm lg:text-md text-wrap text-ellipsis overflow-auto'> 
             {description}  </p>
         </div>
         <p className='relative mt-2 mb-1 text-xs lg:text-sm text-start invisible sm:visible'> 

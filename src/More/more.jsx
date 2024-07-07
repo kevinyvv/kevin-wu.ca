@@ -84,7 +84,7 @@ const Projects = () => {
         </div>
         <div className="embla__slide pr-4">
         <Projectcontainer 
-        title='Spotify Recommendations'
+        title='Spotify Recs'
          imag = {spotify} 
          description = "Web app to generate Spotify recommendations on demand." 
          link="https://github.com/kevinyvv/spotify-react"
