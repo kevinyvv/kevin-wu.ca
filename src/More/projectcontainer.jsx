@@ -20,7 +20,7 @@ const Projectcontainer = ( {title, imag, description, link, stack} ) => {
             <p className='ml-4 h-[10svh] w-full text-start text-sm lg:text-md overflow-auto'> 
             {description}  </p>
         </div>
-        <p className='relative mt-2 pb-2 text-xs lg:text-sm text-start invisible sm:visible'> 
+        <p className='relative mt-2 pb-2 mb-2 text-xs lg:text-sm text-start invisible sm:visible'> 
           {stack?.map((tech, index) => (
             <b key={index} className='mr-4 overflow-hidden bg-[#D7CAB2]
              dark:bg-gray-400 rounded-xl p-1'>
