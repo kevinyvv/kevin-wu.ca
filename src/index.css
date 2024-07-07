@@ -24,10 +24,10 @@ code {
     display: flex;
   }
   .embla__slide {
-    @apply mx-auto min-w-0 h-[25svh] flex-[0_0_75%] md:flex-[0_0_60%] xl:flex-[0_0_33%]
+    @apply mx-auto min-w-0 h-[30svh] flex-[0_0_75%] md:flex-[0_0_60%] xl:flex-[0_0_33%]
   }
   .embla__viewport {
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .embla__buttons {
     display: grid;
@@ -65,5 +65,14 @@ code {
       display: none;
     }
   }
-  
+  @media (max-height: 700px) {
+    .button-hide {
+      display: none;
+    }
+    .project-images {
+      height: 40px !important;
+      width: 40px !important;
+    }
+  }
+
 }

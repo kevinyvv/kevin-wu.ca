@@ -23,7 +23,7 @@ const ModeSwitch = () => {
     };
   
     return (
-      <div className="sticky w-12 h-0 top-4">
+      <div className="sticky w-12 h-0 top-1 z-10">
         <DarkModeSwitch
           style={{ marginLeft: '16px' }}
           checked={isDarkMode}

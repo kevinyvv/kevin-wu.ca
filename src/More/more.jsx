@@ -160,7 +160,7 @@ const More = () => {
     const [selected, setSelected] = useState("work")
     
     return(
-        <section id='more' className="relative top-[12%]
+        <section id='more' className="relative top-[10%]
         text-center mt-4 mb-6 md:mb-12 text-md sm:text-lg md:text-xl dark:text-white">
           <div className="flex justify-center h-min">
             <p className="font-bold"> about my &nbsp; </p>
@@ -186,7 +186,7 @@ const More = () => {
           </div>
           <div className="flex: justify-center align-center backdrop-blur-sm">
                 {selected === "work" ? 
-                  <div>
+                  <div className="h-fit">
                     <Me/>
                     <Projects/>
                    </div>
