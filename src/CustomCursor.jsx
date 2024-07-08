@@ -18,17 +18,40 @@ const CustomCursor = () => {
             left: `${posX}px`,
             top: `${posY}px`,
           },
-          { duration: 300, fill: 'forwards' }
+          { duration: 500, fill: 'forwards' }
         );
       }
     };
 
+    const handleMouseEnter = () => {
+      if (cursorDotRef.current) {
+        cursorDotRef.current.style.width = 'var(--cursor-dot-size-hover)';
+        cursorDotRef.current.style.height = 'var(--cursor-dot-size-hover)';
+      }
+    };
+
+    const handleMouseLeave = () => {
+      if (cursorDotRef.current) {
+        cursorDotRef.current.style.width = 'var(--cursor-dot-size)';
+        cursorDotRef.current.style.height = 'var(--cursor-dot-size)';
+      }
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
+    document.querySelectorAll('a, NavLink, button, [role="button"]').forEach((el) => {
+      el.addEventListener('mouseenter', handleMouseEnter);
+      el.addEventListener('mouseleave', handleMouseLeave);
+    });
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      document.querySelectorAll('a, NavLink, button, [role="button"]').forEach((el) => {
+        el.removeEventListener('mouseenter', handleMouseEnter);
+        el.removeEventListener('mouseleave', handleMouseLeave);
+      });
     };
-  }, []);
+  });
+  
 
   return (
     <>

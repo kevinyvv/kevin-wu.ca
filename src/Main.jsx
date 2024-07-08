@@ -13,11 +13,16 @@ import mascot from "./mascot.png";
 import ModeSwitch from './sunandmoon';
 import Stars from './stars';
 import { BrowserView } from 'react-device-detect'
+import CustomCursor from './CustomCursor';
 
 const Main = () => {
+
+  const [selected, setSelected] = useState("work")
+
   return (
     
     <div className="w-full h-screen overflow-auto dark:bg-[#0a0e23] bg-[#fffaf0]">
+            <CustomCursor/>
             <Stars/>
             <ModeSwitch/>
       <div className="relative top-[10%] flex flex-col dark:text-white">
@@ -39,7 +44,7 @@ const Main = () => {
         </div>
       </div>
       
-      <More/>
+      <More selected={selected} setSelected={setSelected}/>
     </div>
   );
 }

@@ -14,7 +14,6 @@ function App() {
 
   return (
     <div className="w-full h-full bg-[#fffaf0] cursor md:cursor-none">
-      <CustomCursor/>
       <Navigation/>
       <Routes>
         <Route path = '/' element = {<Main/>}/>

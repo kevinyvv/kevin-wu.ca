@@ -21,7 +21,7 @@ const Me = () => {
   return(   
     <div className='mt-6 mx-auto w-2/3 min-h-fit text-sm md:text-lg lg:text-xl'>
     <div className="text-start">
-      <p>Hi there, I'm Kevin. I'm a <span className="font-bold font-tnr italic cursor-pointer pr-1">Computer Science </span> student at the University of Waterloo. 
+      <p>Hi there, I'm Kevin. I'm a <button className="font-bold font-tnr italic cursor-pointer pr-1">Computer Science </button> student at the University of Waterloo. 
       Currently, I'm working as a Software Developer at Safuture.
 
       </p>
@@ -34,7 +34,7 @@ const Me = () => {
 
     <div className="text-start">
       <p> In terms of software, I've had the most experience with full-stack work.
-        Recently though, I've been trying out game development, and I've been working on <span className="font-bold font-tnr italic cursor-pointer pr-1"> creating a game </span> with friends.
+        Recently though, I've been trying out game development, and I've been working on <button className="font-bold font-tnr italic cursor-pointer pr-1"> creating a game </button> with friends.
         You can check out some of my work below, and see my experiences on my <NavLink to="/Resume" className="font-bold font-tnr italic"> Resume </NavLink>.
       </p>
     </div>
@@ -156,8 +156,7 @@ const Self = () => {
 }
 
 
-const More = () => {
-    const [selected, setSelected] = useState("work")
+const More = ({selected, setSelected}) => {
     
     return(
         <section id='more' className="relative top-[10%]

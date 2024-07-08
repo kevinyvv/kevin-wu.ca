@@ -17,7 +17,11 @@ code {
 }
 
 @layer components {
-
+  :root {
+    --cursor-color: black;
+    --cursor-dot-size: 5px;
+    --cursor-dot-size-hover: 15px;
+  }
   .embla {
   }
   .embla__container {
@@ -36,10 +40,11 @@ code {
     align-items: center;
   }
   .cursor-dot {
-    width: 5px;
-    height: 5px;
-    background-color: black;
-    
+    width: var(--cursor-dot-size);
+    height: var(--cursor-dot-size);
+    background-color: var(--cursor-color);
+    border-radius: 50%;
+    transition: width 0.1s ease, height 0.1s ease;
   }
   .cursor-outline {
     background-color: transparent;
