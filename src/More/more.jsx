@@ -162,22 +162,22 @@ const More = ({selected, setSelected}) => {
         <section id='more' className="relative top-[10%]
         text-center mt-4 mb-6 md:mb-12 text-md sm:text-lg md:text-xl dark:text-white">
           <div className="flex justify-center h-min">
-            <p className="font-bold"> about my &nbsp; </p>
+            <p className="font-bold mr-1 md:mr-1"> about my  </p>
 
             <button
-              className={`mr-3 md:mr-6 ${selected === "work" ? "font-bold" : "opacity-30"}`}
+              className={`mr-1 md:mr-4 ${selected === "work" ? "font-bold" : "opacity-30"}`}
               onClick={() => setSelected("work")}
             >
               work
             </button>
             <button
-              className={`mr-3 md:mr-6 ${selected === "hobbies" ? "font-bold" : "opacity-30"}`}
+              className={`mr-1 md:mr-4 ${selected === "hobbies" ? "font-bold" : "opacity-30"}`}
               onClick={() => setSelected("hobbies")}
             >
               hobbies
             </button>
             <button
-              className={`mr-3 md:mr-6 ${selected === "self" ? "font-bold" : "opacity-30"}`}
+              className={`mr-1 md:mr-4 ${selected === "self" ? "font-bold" : "opacity-30"}`}
               onClick={() => setSelected("self")}
             >
               self
