@@ -10,9 +10,14 @@ import Autoplay from "embla-carousel-autoplay";
 
 import Projectcontainer from "./projectcontainer";
 import mascot from '../mascot.png';
-import memoir from './memoir.png';
-import spotify from './spotify.png'
-import cat from './cat.png'
+import memoir from './Images/memoir.png';
+import memoirxl from './Images/memoirxl.png';
+import spotify from './Images/spotify.png';
+import spotifyxl from "./Images/spotifyxl.png";
+import cat from './Images/cat.png';
+import emxl from './Images/emailmanagerxl.jpg';
+import git from './Images/gitinsights.png';
+import gitxl from './Images/gitinsightsxl.png';
 
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
@@ -58,17 +63,32 @@ const Projects = () => {
   return(   
     <div className="embla flex w-2/3 mx-auto">
 
-    <button className="embla__prev xl:invisible" onClick={scrollPrev}>
+    <button className="embla__prev lg:mr-3" onClick={scrollPrev}>
         <FaChevronLeft />
       </button> 
 
     <div className="embla__viewport mt-[5svh]" ref={emblaRef}>
       <div className="embla__container space-x-4">
+
+        <div className="embla__slide">
+          <Projectcontainer 
+          title='GitInsights' 
+          imag = {git}
+          largeImage={gitxl}
+          description = "Enhances coders' understanding of codebases through generative summaries and visualizations, tracking every code change. Runner-up for best dev tool at HackThe6ix. " 
+          shortDescription= "All-in-one tool for Git."
+          link="https://devpost.com/software/gitinsights"
+          stack={['React', 'Express', 'PostgreSQL']}
+          />
+        </div>
+
         <div className="embla__slide">
         <Projectcontainer 
         title='Memoir' 
-        imag = {memoir} 
-        description = "Social media app prototype connecting users through past memories." 
+        imag = {memoir}
+        largeImage={memoirxl}
+        description = "Social media app prototype connecting users through past memories. Built with React, Flask, MongoDB, utilising Cohere API and D3.js. Built at UoftHacks XI." 
+        shortDescription= "Social Media App."
         link="https://github.com/kevinyvv/memoir"
         stack={['React', 'Flask', 'sci-kit']}
         />
@@ -76,8 +96,10 @@ const Projects = () => {
         <div className="embla__slide">
         <Projectcontainer 
         title='EmailManager' 
-        imag = {mascot} 
-        description = "Email app with spam-filter and the feature of creating and sending AI-generated responses."
+        imag = {mascot}
+        largeImage={emxl}
+        description = "Email app with spam-filter and the feature of creating and sending AI-generated responses. Built with Next, Flask, and PostgreSQL."
+        shortDescription="AI Assistant."
         link="https://github.com/kevinyvv/Email-Manager"
         stack={['Next.js', 'Flask', 'PostgreSQL']}
         />
@@ -85,8 +107,10 @@ const Projects = () => {
         <div className="embla__slide pr-4">
         <Projectcontainer 
         title='Spotify Recs'
-         imag = {spotify} 
-         description = "Web app to generate Spotify recommendations on demand." 
+         imag = {spotify}
+         largeImage = {spotifyxl}
+         description = "Web app to generate Spotify recommendations on demand. Built with React, designed with Figma." 
+         shortDescription="Find new songs."
          link="https://github.com/kevinyvv/spotify-react"
         stack={['React']}/>
         </div>
@@ -94,7 +118,7 @@ const Projects = () => {
       </div>
     </div>
 
-    <button className="embla__next xl:invisible" onClick={scrollNext}>
+    <button className="embla__next lg:ml-3" onClick={scrollNext}>
         <FaChevronRight/>
     </button>
     
@@ -165,19 +189,19 @@ const More = ({selected, setSelected}) => {
             <p className="font-bold mr-1 md:mr-1"> about my  </p>
 
             <button
-              className={`mr-1 md:mr-4 ${selected === "work" ? "font-bold" : "opacity-30"}`}
+              className={`mr-2 md:mr-4 ${selected === "work" ? "font-bold" : "opacity-30"}`}
               onClick={() => setSelected("work")}
             >
               work
             </button>
             <button
-              className={`mr-1 md:mr-4 ${selected === "hobbies" ? "font-bold" : "opacity-30"}`}
+              className={`mr-2 md:mr-4 ${selected === "hobbies" ? "font-bold" : "opacity-30"}`}
               onClick={() => setSelected("hobbies")}
             >
               hobbies
             </button>
             <button
-              className={`mr-1 md:mr-4 ${selected === "self" ? "font-bold" : "opacity-30"}`}
+              className={`mr-2 md:mr-4 ${selected === "self" ? "font-bold" : "opacity-30"}`}
               onClick={() => setSelected("self")}
             >
               self

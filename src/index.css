@@ -28,7 +28,7 @@ code {
     display: flex;
   }
   .embla__slide {
-    @apply mx-auto min-w-0 h-[30svh] flex-[0_0_75%] md:flex-[0_0_60%] xl:flex-[0_0_33%]
+    @apply mx-auto min-w-0 h-[30svh] xl:h-[50svh] flex-[0_0_75%]
   }
   .embla__viewport {
     overflow-x: hidden;
@@ -65,7 +65,7 @@ code {
     pointer-events: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .cursor-dot, .cursor-outline {
       display: none;
     }
