@@ -8,7 +8,7 @@ const Projectcontainer = ( {title, imag, largeImage, description, shortDescripti
     <div className='mt-4 max-w-full h-[20svh]
     rounded-lg border border-gray-300 flex flex-col shadow-gray-500 hover:scale-[101%]
     shadow-md p-4
-    xl:h-[45svh]
+    xl:h-[27rem]
     '>
         <div className='flex justify-between items-center'>
             <h1 className='font-bold mx-auto

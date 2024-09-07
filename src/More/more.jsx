@@ -39,7 +39,7 @@ const Me = () => {
 
     <div className="text-start">
       <p> In terms of software, I've had the most experience with full-stack work.
-        Recently though, I've been trying out game development, and I've been working on <button className="font-bold font-tnr italic cursor-pointer pr-1"> creating a game </button> with friends.
+        Recently though, I've been trying out game development, and I've been working on <a target="_blank" href="https://github.com/dieterwhitt/Solaris" className="font-bold font-tnr italic cursor-pointer pr-1"> creating a game </a> with friends.
         You can check out some of my work below, and see my experiences on my <NavLink to="/Resume" className="font-bold font-tnr italic"> Resume </NavLink>.
       </p>
     </div>
@@ -67,7 +67,7 @@ const Projects = () => {
         <FaChevronLeft />
       </button> 
 
-    <div className="embla__viewport mt-[5svh]" ref={emblaRef}>
+    <div className="embla__viewport mt-[5svh] mb-[5svh]" ref={emblaRef}>
       <div className="embla__container space-x-4">
 
         <div className="embla__slide">
