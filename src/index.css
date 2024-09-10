@@ -28,7 +28,7 @@ code {
     display: flex;
   }
   .embla__slide {
-    @apply mx-auto min-w-0 h-[30svh] xl:h-[50svh] flex-[0_0_75%] mb-[2svh]
+    @apply mx-auto min-w-0 h-[12rem] md:h-[12rem] lg:h-[14rem] xl:h-[30rem] flex-[0_0_75%] mb-[2svh]
   }
   .embla__viewport {
     overflow-x: hidden;

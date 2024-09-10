@@ -5,7 +5,7 @@ const Projectcontainer = ( {title, imag, largeImage, description, shortDescripti
 
   return (
 
-    <div className='mt-4 max-w-full h-[20svh]
+    <div className='mt-4 max-w-full h-[10rem] md:h-[10rem] lg:h-[12rem]
     rounded-lg border border-gray-300 flex flex-col shadow-gray-500 hover:scale-[101%]
     shadow-md p-4
     xl:h-[27rem]
@@ -31,7 +31,7 @@ const Projectcontainer = ( {title, imag, largeImage, description, shortDescripti
             className='hidden xl:block w-[36rem]  h-[18rem] rounded-lg'
           />
 
-          <p className='mt-2 xl:pt-2 md:mt-0 md:ml-4 h-[10svh] w-full text-center 
+          <p className='mt-2 xl:pt-2 md:mt-0 md:ml-4 h-[4rem] w-full text-center 
           md:text-start text-sm md:text-md lg:text-md xl:text-base text-wrap hidden md:block'> 
               {description}  
           </p>

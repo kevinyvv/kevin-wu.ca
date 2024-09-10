@@ -61,7 +61,7 @@ const Projects = () => {
   }, [emblaApi])
 
   return(   
-    <div className="embla flex w-2/3 mx-auto">
+    <div className="embla flex w-2/3 mx-auto min-h-fit">
 
     <button className="embla__prev lg:mr-3" onClick={scrollPrev}>
         <FaChevronLeft />
@@ -207,9 +207,9 @@ const More = ({selected, setSelected}) => {
               self
             </button>
           </div>
-          <div className="flex: justify-center align-center backdrop-blur-sm">
+          <div className="flex justify-center align-center backdrop-blur-sm">
                 {selected === "work" ? 
-                  <div className="h-fit">
+                  <div className="">
                     <Me/>
                     <Projects/>
                    </div>
