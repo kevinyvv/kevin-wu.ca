@@ -24,7 +24,7 @@ import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 const Me = () => {
 
   return(   
-    <div className='mt-6 mx-auto w-2/3 min-h-fit text-sm md:text-lg lg:text-xl'>
+    <div className='mt-6 mx-auto w-1/3 sm:w-2/3 min-h-fit text-sm md:text-lg lg:text-xl'>
     <div className="text-start">
       <p>Hi there, I'm Kevin. I'm a <button className="font-bold font-tnr italic cursor-pointer pr-1">Computer Science </button> student at the University of Waterloo. 
       Currently, I'm working as a Software Developer at Safuture.
