@@ -13,7 +13,7 @@ import CustomCursor from './CustomCursor';
 function App() {
 
   return (
-    <div className="w-full h-full bg-[#fffaf0] cursor lg:cursor-none">
+    <div className="w-full h-full bg-[#fffaf0] cursor lg:cursor">
       <Navigation/>
       <Routes>
         <Route path = '/' element = {<Main/>}/>

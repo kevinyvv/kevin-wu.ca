@@ -22,7 +22,9 @@ const Main = () => {
   return (
     
     <div className="w-full h-screen overflow-auto dark:bg-[#0a0e23] bg-[#fffaf0]">
-            <CustomCursor/>
+            {
+            // <CustomCursor/> 
+            }
             <Stars/>
             <ModeSwitch/>
       <div className="relative top-[10%] flex flex-col dark:text-white">

@@ -22,40 +22,37 @@ code {
     --cursor-dot-size: 5px;
     --cursor-dot-size-hover: 15px;
   }
-  .embla {
+
+  .global-container {
+    @apply flex flex-col items-center;
   }
-  .embla__container {
-    display: flex;
+
+  .content-container {
+    @apply w-4/5 mx-auto;
   }
-  .embla__slide {
-    @apply mx-auto min-w-0 h-[12rem] md:h-[12rem] lg:h-[14rem] xl:h-[30rem] flex-[0_0_75%] mb-[2svh]
+
+  .section-spacing {
+    @apply mt-8 mb-12;
   }
+
   .embla__viewport {
-    overflow-x: hidden;
+    @apply overflow-hidden w-full;
   }
-  .embla__buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
-    align-items: center;
-  }
-  .cursor-dot {
-    width: var(--cursor-dot-size);
-    height: var(--cursor-dot-size);
-    background-color: var(--cursor-color);
-    border-radius: 50%;
-    transition: width 0.1s ease, height 0.1s ease;
-  }
-  .cursor-outline {
-    background-color: transparent;
-    width: 30px;
-    height: 30px;
-    border: 2px solid hsla(0, 0%, 0%, 0.5);
+
+  .embla__container {
+    @apply flex space-x-4 w-full;
   }
   
+  .embla__slide {
+    @apply flex-shrink-0 w-[calc(100%-1rem)] md:w-[calc(100%-2rem)] lg:w-[calc(100%-4rem)];
+  }
+
+  .embla__slide {
+    @apply flex-shrink-0 w-full md:w-3/4 lg:w-1/2 h-auto;
+  }
+
   .cursor-dot,
   .cursor-outline {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -70,6 +67,7 @@ code {
       display: none;
     }
   }
+
   @media (max-height: 700px) {
     .button-hide {
       display: none;
@@ -79,5 +77,4 @@ code {
       width: 40px !important;
     }
   }
-
 }
