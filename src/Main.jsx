@@ -35,8 +35,8 @@ const Main = () => {
             <h1 className='text-black dark:text-white font-bold text-4xl md:text-5xl lg:text-6xl text-center'> Kevin Wu </h1>
         </div>
         <div className='flex justify-center space-x-2 my-2 mt-6'>
-        <NavLink to="/Resume" > 
-        <FaFileAlt className="hover:scale-105" size ={28}/> </NavLink>
+        <NavLink disabled={true} className="disabled pointer-events-none"> 
+        <FaFileAlt className="" color='gray' size ={28}/> </NavLink>
         <a 
         href="https://www.linkedin.com/in/wuyukun" target="_blank"><FaLinkedin className="hover:scale-105" size = {30}/> </a>
         <a 
