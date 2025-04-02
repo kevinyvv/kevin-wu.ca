@@ -16,8 +16,7 @@ import { BrowserView } from 'react-device-detect'
 import CustomCursor from './CustomCursor';
 
 const Main = () => {
-
-  const [selected, setSelected] = useState("work")
+  const [selected, setSelected] = useState("work");
 
   return (
     

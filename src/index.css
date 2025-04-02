@@ -23,33 +23,55 @@ code {
     --cursor-dot-size-hover: 15px;
   }
 
-  .global-container {
-    @apply flex flex-col items-center;
-  }
+/* Add these subtle styles to your global CSS */
 
-  .content-container {
-    @apply w-4/5 mx-auto;
-  }
+/* Improve text readability with proper line height */
+body {
+  line-height: 0.5;
+  letter-spacing: 0.01em;
+}
 
-  .section-spacing {
-    @apply mt-8 mb-12;
-  }
+/* Subtle link transitions */
+a {
+  transition: color 0.3s ease;
+}
 
-  .embla__viewport {
-    @apply overflow-hidden w-full;
-  }
+/* Add very subtle border to active navigation */
+.nav-active {
+  border-bottom: 1px solid #b8a38b;
+}
 
-  .embla__container {
-    @apply flex space-x-4 w-full;
-  }
-  
-  .embla__slide {
-    @apply flex-shrink-0 w-[calc(100%-1rem)] md:w-[calc(100%-2rem)] lg:w-[calc(100%-4rem)];
-  }
+/* Gentle fade-in for page content */
+@keyframes gentleFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-  .embla__slide {
-    @apply flex-shrink-0 w-full md:w-3/4 lg:w-1/2 h-auto;
-  }
+.content-fade {
+  animation: gentleFade 0.5s ease-out;
+}
+
+/* Subtle link underline effect */
+.link-underline {
+  position: relative;
+}
+
+.link-underline:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.link-underline:hover:after {
+  transform: scaleX(1);
+}
 
   .cursor-dot,
   .cursor-outline {
