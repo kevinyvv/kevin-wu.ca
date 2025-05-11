@@ -31,51 +31,25 @@ const Me = () => {
     <div className='mt-8 mx-auto w-3/4 lg:w-2/4 h-[50svh] text-sm md:text-lg lg:text-xl'>
       <div className="text-start">
         <p className="leading-relaxed">
-          Hi there, I'm Kevin. 
-          I'm currently a SWE intern at <a target="_blank" href="https://www.nationgraph.com" className="font-bold font-satoshi italic pr-1 text-sumi hover:text-sumi-dark dark:text-white"> NationGraph, </a> 
-          building out the backend processes. In the past, I've interned at Safuture, where I spent most of my time building out a full-stack product.
-          I'm interested in working on all aspects of computer science. 
+          I'm currently a computer science student at the University of Waterloo, learning about algorithms, data structures, and cognitive psychology this term.
+          I just wrapped up my internship at NationGraph, 
+          where I was building out data pipelines. In the past, I've interned at Safuture, where I spent most of my time building out a web app for equipment management.
         </p>
       </div>
 
       <div className="text-start mt-10">
-        <p className="leading-relaxed"> 
-          In terms of work, I've had the most experience with full-stack development.
-          Recently though, I've been trying out game development, and I've been working on 
-          <a 
-            target="_blank" 
-            href="https://github.com/dieterwhitt/Solaris" 
-            className="pl-2 font-bold font-satoshi italic cursor-pointer pr-2 text-sumi hover:text-sumi-dark dark:text-white"
-            rel="noopener noreferrer"
-            ref={containerRef}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}> 
-            creating a game 
-          </a> 
-          {false && (
-            <div
-              className="absolute pointer-events-none transform z-50"
-              style={{
-                top: position.y,
-                left: position.x,
-              }}
-            >
-              <video
-              autoplay
-              muted
-              className="w-[128] h-32 object-cover rounded-md shadow-lg opacity-90"
-              >
-                <source
-                  src="https://github.com/user-attachments/assets/b29f43f6-c964-45e8-b01e-7ca64d0f3ea7"
-                  type="video/mp4"
-                />
-              </video>
-            </div>)}
-          
-          with friends.
-          You can check out some of my projects on my github, and see my experiences on my <NavLink to="/Resume" className="font-bold font-satoshi italic text-sumi hover:text-sumi-dark dark:text-white"> Resume </NavLink>.
+        <p className="leading-relaxed">  
+          In terms of experience, I'm most familiar with full-stack development.
+          Recently though, I've been able to explore some other aspects of software through a variety of different projects:
         </p>
+        <ul className="list-disc list-inside mt-4">
+          <li className="leading-relaxed">robot that applies bandaids to hand injuries
+          </li>
+          <li className="leading-relaxed"> botting script for an RPG I used to play
+          </li>
+          <li className="leading-relaxed"> and a manga scanlation app (work in progress)
+          </li>
+        </ul>
       </div>
     </div>
   )
@@ -108,21 +82,21 @@ const Hobbies = () => {
     <div className='mt-8 mx-auto w-3/4 lg:w-2/4 h-[50svh] text-sm md:text-lg lg:text-xl'>
       <div className="text-start">
         <p className="leading-relaxed"> 
-          Hi there, I'm Kevin. When I'm not coding, I like to do a variety of things in my spare time. 
-          Recently, I've been trying to get better at running, relearning the piano, and climbing.
-          If you have any helpful tips for improving at any of these, please let me know!
+          Outside of software, I like to do a variety of things in my spare time. 
+          Recently, I've been pretty focused on getting better at climbing.
+          If you have any helpful tips for improving quickly as a beginner, let me know!
         </p>
       </div>
       
       <div className="mt-10 text-start">
         <p className="leading-relaxed">
-          Apart from my current interests, I also like reading (<a target='_blank' href='https://myanimelist.net/mangalist/milkedchicken' className="font-bold font-satoshi italic pr-1 -ml-1 text-sumi hover:text-sumi-dark dark:text-white"> manga </a> and books), swimming, and going to the gym.
+          Some other hobbies I enjoy are: reading (<a target='_blank' href='https://myanimelist.net/mangalist/milkedchicken' className="font-bold font-satoshi italic pr-1 -ml-1 text-sumi hover:text-sumi-dark dark:text-white"> manga </a> and books), swimming, and going to the gym.
         </p>
       </div>
       
       <div className="mt-10 text-start">
         <p className="leading-relaxed">
-          I've also played a lot of Supercell games as a teen, and I've completed
+          I haven't been playing video games recently, but I'm proud that I've completed
           <a 
             target="_blank" 
             href='https://link.clashofclans.com/en?action=OpenPlayerProfile&tag=8QGLL2JV0' 
@@ -150,7 +124,7 @@ const Hobbies = () => {
               />
             </div>
           )}
-          I haven't had as much time recently, but I used to play the other games as well (add my sc id @kingkevin)
+          I haven't had as much time recently, but I used to play the other supercell games as well (add my sc id @kingkevin)
         </p>
       </div>
     </div>

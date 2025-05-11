@@ -1,4 +1,5 @@
 import React, {createContext} from "react";
+import { useEffect } from "react";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
 export const DarkModeContext = createContext();
@@ -21,7 +22,7 @@ const ModeSwitch = () => {
         console.log('Dark mode off');
       }
     };
-  
+
     return (
       <div className="sticky w-12 h-0 top-1 z-10">
         <DarkModeSwitch
